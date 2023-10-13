@@ -1,0 +1,47 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Layouts */
+#page-container {
+  width: 1000px;
+  margin: 2rem auto;
+}
+
+#book-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-auto-rows: 160px;
+  gap: 10px;
+  grid-auto-flow: dense;
+}
+
+#control-bar {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+/* Components */
+button {
+  border-radius: 30px;
+  padding: .75rem 1rem;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  background: rgb(6,149,228);
+  background: linear-gradient(90deg, rgba(6,149,228,1) 0%, rgba(201,142,219,1) 96%);
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.book {
+  background-color: #007acc;
+  color: white;
+  padding: 1rem;
+}
+
+.title {
+  font-weight: bold;
+}
