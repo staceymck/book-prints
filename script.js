@@ -13,9 +13,9 @@ const books = [
   {title: "The Phoenix Project", author: "Gene Kim, Keven Behr, George Spafford"}
 ];
 
-const container = document.getElementById("container");
+const container = document.getElementById("book-container");
 
-// For/Of loop is an ES6 feature, not supported in IE; p[reserves the index order
+// For/Of loop is an ES6 feature, not supported in IE; preserves the index order
 // Using const to declare 'book' because I'm not changing book in the loop block
 for (const book of books) {
   const div = document.createElement("div");
@@ -33,3 +33,20 @@ for (const book of books) {
   div.appendChild(author);
   container.appendChild(div);
 }
+
+function changeColors() {
+  const colors = ["#ffaa00", "#009999", "#ff8533", "#ffb3b3", "#ffdd99", "#5c5c8a", "#70dbdb"]
+  const books = document.querySelectorAll(".book")
+
+  books.forEach(function (book) {
+    const randColor = colors[Math.floor(Math.random() * colors.length)]
+    book.style.backgroundColor = randColor
+  })
+}
+
+// Randomly assign colors to the book cards
+document.addEventListener("DOMContentLoaded", changeColors)
+
+// Let users update colors via button click
+const colorButton = document.getElementById("color-button")
+colorButton.addEventListener("click", changeColors)
