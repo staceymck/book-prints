@@ -50,3 +50,9 @@ document.addEventListener("DOMContentLoaded", changeColors)
 // Let users update colors via button click
 const colorButton = document.getElementById("color-button")
 colorButton.addEventListener("click", changeColors)
+
+// Let users open print dialogue via button click
+const printButton = document.getElementById("print-button")
+printButton.addEventListener("click", function() {
+  window.print();
+})
